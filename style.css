@@ -3,3 +3,90 @@
 	padding: 0;
     font-family: 'Open Sans', sans-serif;
 } 
+
+h1{
+    margin: 15px;
+}
+
+header{
+    width: 100%;
+    height: 230px;
+    position: relative;
+}
+
+.header-itens{
+    background: yellow;
+    width: 100%;
+    height: 60%;
+}
+
+.main-navigation{
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    bottom: 0;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(104, 12, 165);
+}
+
+.nav-itens{
+    list-style: none;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-itens li{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-area{
+    width: 20%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 40px;
+}   
+
+.product-list{
+    width: 75%;
+    margin: auto;
+    padding: 20px;
+}
+
+.products-container{   
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.potion-product{
+    width: 300px;
+    height: 300px;
+    margin: 30px 0;
+}
+
+.potion-image{
+    width: 100%;
+    height: 90%;
+}
+
+.potion-name{
+    width: 100%;
+    display:inline-block;
+    font-weight: bold;
+}
+
+.potion-price{
+    display: inline-block;
+    color: red;
+} 
