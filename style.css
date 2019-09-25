@@ -4,6 +4,14 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+#unchecked {
+    display: none;
+}
+
+.mobile-menu-icon{
+    display: none;
+}
+
 h1 {
     margin: 15px;
 }
@@ -25,7 +33,7 @@ header {
     display: flex;
 }
 
-.header-logo {
+.header-logo-container {
     width: 30%;
     margin: 0 auto;
     display: flex;
@@ -152,7 +160,8 @@ header {
 
 .potion-image {
     width: 90%;
-    height: 90%;
+    height: 95%;
+    cursor: pointer;
 }
 
 .potion-name {
@@ -241,7 +250,7 @@ footer {
     margin: 15px 0;
 }
 
-.form-submit-button {
+.submit-button {
     width: 20%;
     background: #d6391e;
     padding: 10px;
@@ -256,18 +265,39 @@ footer {
     h1 {
         text-align: center;
     }
-    header .logo {
-        width: 70%;
-        margin: 0 auto;
+    #menu-icon-label{
+        width: 100%;
+        cursor: pointer;
+    }
+    .mobile-menu-icon {
+        display: inline;
+    }
+    .menu-navigation-container {}
+    .header-itens {
+        align-items: center;
+    }
+    .header-logo-container {
+        width: 75%;
+        display: block;
+    }
+    .logo {
+        width: 90%;
     }
     .header-search-bar {
         display: none;
     }
-    .header-bag-area {}
+    .bag-icon {
+        width: 90%;
+    }
+    .header-bag-icon-container {
+        width: 40%;
+        display: flex;
+    }
+    .header-bag-area {
+        display: block;
+    }
     .header-shipping-text {
-        display: inline-block;
-        justify-content: center;
-        align-items: center;
+        display: none;
     }
     .content {
         width: 100%;
@@ -291,7 +321,10 @@ footer {
     }
     .footer-box-right {
         width: 100%;
-        position: absolute;
+        flex-flow: column-reverse;
+    }
+    .footer-box-left {
+        width: 100%;
     }
     .footer-useful-links {
         display: none;
@@ -299,44 +332,74 @@ footer {
     .footer-form-container {
         height: 40%;
     }
+    .footer-social-media {}
+    .modal-potion-infos {
+        float: right;
+    }
 }
 
 /* Modal */
 
-.modal-container{
-    width: 70%;
-    height: 70%;
+.modal-container {
+    width: 100vw;
+    height: 100vh;
     position: fixed;
-    top: 0;     
+    top: 0;
     left: 0;
-    background: rgba(0,0,0,.5);
+    background: rgba(0, 0, 0, .5);
     z-index: 1000;
     display: none;
     justify-content: center;
     align-items: center;
 }
 
-.modal-content{
+.modal-content {
     background: #fff;
-    width: 60%;
-    height: 60%;
+    width: 55%;
+    height: 65%;
     min-width: 300px;
-    padding: 40px; 
+    padding: 40px;
     position: relative;
 }
 
-.button-close{
+.button-close {
     position: absolute;
     top: 0;
     right: 0;
     border: none;
     background: none;
-    margin: 15px;
+    margin: 5px 12px;
     font-weight: bold;
     cursor: pointer;
     font-size: 1.1em;
 }
 
-.modal-container.show{
+.modal-container.show {
     display: flex;
+}
+
+.modal-image-container {
+    float: left;
+    width: 60%;
+}
+
+.modal-potion-image {
+    width: 95%;
+}
+
+.modal-potion-title {
+    margin: 15px 0;
+}
+
+#button-add-cart {
+    display: block;
+    margin: 15px;
+}
+
+.modal-potion-title:last-of-type {
+    margin-bottom: 0;
+}
+
+.modal-potion-ingredients {
+    list-style: none;
 }

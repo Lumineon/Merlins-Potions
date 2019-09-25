@@ -4,14 +4,24 @@
     <title>Merlin's Potions</title>
     <link href="style.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="script.js"></script>
     <meta name="viewport" content="width=device-width">
 </head>
 
 <body>
     <header>
+        <!-- Menu Mobile -->
+
+        <div class="mobile-navigation-container">
+            <input type="checkbox" id="unchecked">
+            <label id="menu-icon-label">
+                <img class="mobile-menu-icon" src="Icons/menu-icon.png">
+            </label>
+        </div>
+
+        <!-- Página -->
+        
         <div class="header-itens">
-            <div class="header-logo">
+            <div class="header-logo-container">
                 <img class="logo" src="Icons/logo.png" alt="Merlin's potions, fine potions since 1026">
             </div>
             <div class="header-search-bar">
@@ -21,7 +31,9 @@
                 <div class="header-shipping-text">
                     <p>Free Shipping</p><span>on orders over $50</span>
                 </div>
-                <img class="bag-icon" src="Icons/icone_bag.png" alt="a little purple caldron">
+                <div class="header-bag-icon-container">
+                    <img class="bag-icon" src="Icons/icone_bag.png" alt="a little purple caldron">
+                </div>
                 <div class="header-bag">
                     <span class="bag-text">Bag: </span><span class="bag-quantity">1</span>
                 </div>
@@ -127,7 +139,7 @@
                     <h2 class="form-title">Sign up for our Newsletter</h2>
                     <p class="form-text">Sign up for our newsletter & get exclusive discounts!</p>
                     <input type="email" class="form-input-email" placeholder="Enter your Email">
-                    <button class="form-submit-button">Submit</button>
+                    <button id="button-submit-form" class="submit-button">Submit</button>
                 </form>
             </div>
         </div>
@@ -137,17 +149,25 @@
 
     <div id="potion-modal" class="modal-container">
         <div class="modal-content">
-            <button class="button-close">X</button>
-            <h2 class="modal-title">Title</h2>
-            <img class="modal-potion-image" src="">
-            <h2 class="modal-title">Use/Effect:</h2>
-            <h3>Causes the drinker....</h3>
-            <h2 class="modal-title">Ingredients</h2>
-            <h3>red wine</h3>
-            <h2 class="modal-title">Price</h2>
-            <button class="button-add-cart">Add to cart</button>
+            <button id="btn-modal" class="button-close">X</button>
+            <div class="modal-image-container">
+                <img id="potion-image" class="modal-potion-image" src="Products/aging-potion.png">
+            </div>
+            <div class="modal-potion-infos">
+                <h3 id="potion-name" class="modal-potion-title"></h3>
+                <h3 class="modal-potion-title">Use/Effect:</h3>
+                <p id="potion-effect" class="modal-potion-text">Causes the drinker...</p>
+                <h3 class="modal-potion-title">Ingredients:</h3>
+                <ul id="potion-ingredients" class="modal-potion-ingredients">
+
+                </ul>
+                <h3 class="modal-potion-title">Price:</h3>
+                <span id="potion-price" class="potion-price">$29.99</span>
+                <button id="button-add-cart" class="submit-button">Add to cart</button>
+            </div>
         </div>
     </div>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>
