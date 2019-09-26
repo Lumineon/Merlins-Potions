@@ -11,15 +11,28 @@
     <header>
         <!-- Menu Mobile -->
 
-        <div class="mobile-navigation-container">
-            <input type="checkbox" id="unchecked">
-            <label id="menu-icon-label">
-                <img class="mobile-menu-icon" src="Icons/menu-icon.png">
-            </label>
+        <div class="mobile-menu-container" id="menu-dropdown">
+            <img class="mobile-menu-icon" id="dropdown" onclick="showMenuFunction()" src="Icons/menu-icon.png">
+            <div class="mobile-menu-dropdown-container">
+                <div class="mobile-menu-dropdown-itens" id="dropdown-itens">
+                    <a href="">Potions</a>
+                    <a href="">Ingredients</a>
+                    <a href="">Books</a>
+                    <a href="">Supplies</a>
+                    <a href="">Charms</a>
+                    <a href="">Clearance!</a>
+                    <a href="">Sign In</a> or
+                    <a href="">Sign Up</a>
+                    <!-- <div class="mobile-user-area">
+                        <a href="">Sign In</a> or
+                        <a href="">Sign Up</a>
+                    </div> -->
+                </div>
+            </div>
         </div>
 
         <!-- Página -->
-        
+
         <div class="header-itens">
             <div class="header-logo-container">
                 <img class="logo" src="Icons/logo.png" alt="Merlin's potions, fine potions since 1026">
@@ -35,7 +48,7 @@
                     <img class="bag-icon" src="Icons/icone_bag.png" alt="a little purple caldron">
                 </div>
                 <div class="header-bag">
-                    <span class="bag-text">Bag: </span><span class="bag-quantity">1</span>
+                    <span class="bag-text">Bag:</span><span class="bag-quantity">1</span>
                 </div>
             </div>
         </div>

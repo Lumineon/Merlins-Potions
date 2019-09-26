@@ -1,3 +1,23 @@
+// menu dropdown mobile
+
+function showMenuFunction() {
+    document.getElementById('dropdown-itens').classList.toggle('showMenu');
+}
+
+// fechar menu
+window.onclick = function (event) {
+    if (!event.target.matches('.mobile-menu-icon')) {
+        var dropdown = document.getElementsByClassName("mobile-menu-dropdown-itens");
+        for (var i = 0; i < dropdown.length; i++) {
+            var openDropdown = dropdown[i];
+            if (openDropdown.classList.contains('showMenu')) {
+                openDropdown.classList.remove('showMenu');
+            }
+        }
+    }
+}
+
+
 // modal
 
 var modal = document.getElementById('potion-modal');
@@ -44,12 +64,13 @@ function showInfos(id) {
     document.getElementById("potion-price").innerHTML = '$' + myObj.potions[id].price;
     document.getElementById("potion-image").src = 'Products/' + myObj.potions[id].image;
 
+    var ul = document.getElementById('potion-ingredients');
+    ul.innerHTML = '';
     for (let j = 0; j < myObj.potions[id].ingredients.length; j++) {
-        var ul = document.getElementById('potion-ingredients');
         var li = document.createElement('li');
         ul.appendChild(li);
         li.innerHTML = myObj.potions[id].ingredients[j];
     }
-    //ta concatenando em todo click
 }
+
 
