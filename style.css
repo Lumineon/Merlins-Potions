@@ -28,6 +28,9 @@ header {
     height: 70%;
     display: flex;
 }
+.header-itens.hide{
+    display: none;
+}
 
 .header-logo-container {
     width: 30%;
@@ -48,6 +51,9 @@ header {
     justify-content: center;
     margin: 0 auto;
 }
+.header-search-bar.show{
+    display: flex;
+}
 
 .form-input-email, .input-search-stock {
     width: 65%;
@@ -59,6 +65,7 @@ header {
 
 .input-search-stock {
     width: 80%;
+    padding-left: 30px;
 }
 
 .header-bag-area {
@@ -357,6 +364,7 @@ footer {
     }
     .mobile-menu-icon {
         display: inline;
+        cursor: pointer;
     }
     .mobile-menu-dropdown-container {
         margin: 10px 0;

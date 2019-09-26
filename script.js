@@ -1,13 +1,27 @@
 // menu dropdown mobile
+var search = document.getElementById('search-bar');
 var change = document.getElementById('dropdown');
+var hide = document.getElementById('header-element');
+
 function showMenuFunction() {
     var image = document.getElementById('dropdown-itens').classList.toggle('showMenu');
-    var hide = document.getElementsByTagName('body');
     if (image) {
-        change.src = 'Icons/menu-close-icon.png';
+        showElements();
     } else {
-        change.src = 'Icons/menu-icon.png';
+        hideElements();
     }
+}
+
+function showElements() {
+    change.src = 'Icons/menu-close-icon.png';
+    search.classList.add('show');
+    hide.classList.add('hide');
+}
+
+function hideElements() {
+    change.src = 'Icons/menu-icon.png';
+    search.classList.remove('show');
+    hide.classList.remove('hide');
 }
 
 
