@@ -1,8 +1,15 @@
 // menu dropdown mobile
-
+var change = document.getElementById('dropdown');
 function showMenuFunction() {
-    document.getElementById('dropdown-itens').classList.toggle('showMenu');
+    var image = document.getElementById('dropdown-itens').classList.toggle('showMenu');
+    var hide = document.getElementsByTagName('body');
+    if (image) {
+        change.src = 'Icons/menu-close-icon.png';
+    } else {
+        change.src = 'Icons/menu-icon.png';
+    }
 }
+
 
 // fechar menu
 window.onclick = function (event) {
@@ -19,7 +26,6 @@ window.onclick = function (event) {
 
 
 // modal
-
 var modal = document.getElementById('potion-modal');
 var close = document.getElementById('btn-modal');
 var open = document.getElementsByClassName('potion-image');

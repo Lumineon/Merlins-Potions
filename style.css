@@ -9,7 +9,7 @@
 }
 
 h1 {
-    margin: 15px;
+    margin: 10px 20px;
 }
 
 h2 {
@@ -19,7 +19,7 @@ h2 {
 
 header {
     width: 100%;
-    height: 180px;
+    height: 175px;
     position: relative;
 }
 
@@ -77,6 +77,12 @@ header {
 .bag-text {
     text-transform: uppercase;
     color: #e6e6e6;
+    margin-right: 5px;
+}
+
+.bag-icon{
+    cursor: pointer;
+    margin-right: 10px;
 }
 
 .bag-quantity {
@@ -116,6 +122,10 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+.nav-itens li:hover{
+    background: #461b64;
 }
 
 .user-area {
@@ -131,17 +141,22 @@ header {
 .user-area-login {
     color: white;
     font-style: italic;
+    text-decoration: none;
+    margin: 15px;
+}
+
+.user-area span{
+    color: #7d47a3;
 }
 
 .content {
-    width: 75%;
+    width: 95%;
     margin: auto;
-    padding: 40px;
+    padding: 40px 0;
 }
 
 .content-container {
     width: 100%;
-    height: 100%;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -149,15 +164,16 @@ header {
 
 .product-container {
     width: 30%;
-    height: 40%;
     margin: 30px 0;
-    align-items: center;
 }
 
 .potion-image {
     width: 90%;
-    height: 95%;
+    height: 300px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .potion-name {
@@ -205,6 +221,7 @@ footer {
     padding-right: 35px;
     margin-left: 10px;
     display: inline-block;
+    cursor: pointer;
 }
 
 .footer-social-media {
@@ -216,6 +233,7 @@ footer {
 .footer-social-media-icons {
     width: 6%;
     margin: 15px;
+    cursor: pointer;
 }
 
 .footer-copyright-box {
@@ -255,11 +273,77 @@ footer {
     text-transform: uppercase;
     color: white;
     margin: 0 5px;
+    cursor: pointer;
+}
+
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    width: 55%;
+    height: auto;
+    min-width: 300px;
+    padding: 40px;
+    position: relative;
+}
+
+.button-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background: none;
+    margin: 5px 12px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.modal-container.show {
+    display: flex;
+}
+
+.modal-image-container {
+    float: left;
+    width: 60%;
+}
+
+.modal-potion-image {
+    width: 95%;
+}
+
+.modal-potion-title {
+    margin: 15px 0;
+}
+
+#button-add-cart {
+    display: block;
+    margin: 15px;
+}
+
+.modal-potion-title:last-of-type {
+    margin-bottom: 0;
+}
+
+.modal-potion-ingredients {
+    list-style: none;
 }
 
 @media screen and (max-width: 700px) {
     h1 {
         text-align: center;
+        margin-top: 20px;
     }
     .main-navigation {
         display: none;
@@ -271,36 +355,50 @@ footer {
         width: 10%;
         margin: 25px 20px;
     }
-    #menu-icon-label {
-        width: 100%;
-        cursor: pointer;
-    }
     .mobile-menu-icon {
         display: inline;
     }
     .mobile-menu-dropdown-container {
-        height: auto;
-        width: 100%;
-        position: absolute;
+        margin: 10px 0;
     }
     .mobile-menu-dropdown-itens {
         background: #513367;
         z-index: 1;
-        /* left: -300px; */
         position: absolute;
         display: none;
+        width: 100vw;
     }
+    /* .mobile-menu-dropdown-itens a:first-child {
+        margin-top: 10px;
+    } */
     .mobile-menu-dropdown-itens a {
         display: block;
         text-decoration: none;
         font-style: italic;
         color: white;
-        padding: 10px 45px;
+        padding: 10px 0 10px 50px;
+    }
+    .mobile-menu-dropdown-itens a:hover {
+        background: #461b64;
+    }
+    .mobile-user-area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .mobile-user-area .mobile-sign-text {
+        display: inline-block;
+        padding: 25px;
+        margin: 0;
     }
     .showMenu {
         display: block;
     }
+    
     /* Responsividade */
+    header {
+        height: auto;
+    }
     .header-itens {
         align-items: center;
         float: right;
@@ -340,6 +438,18 @@ footer {
     .bag-quantity {
         margin-left: 5px;
     }
+    .mobile-shipping-text-container {
+        width: 100%;
+        display: inline-block;
+        padding: 10px;
+        background: #e6e6e6;
+        text-align: center;
+        margin-top: 5px;
+    }
+    .mobile-shipping-text {
+        font-style: italic;
+        font-family: sans-serif;
+    }
     .content-container {
         padding-bottom: 50px;
     }
@@ -348,9 +458,11 @@ footer {
         padding: 0;
     }
     .product-container {
-        margin: 0 5px;
         width: 45%;
         height: 30%;
+    }
+    .potion-image{
+        height: auto;
     }
     .nav-itens, .user-area {
         display: inline-block;
@@ -398,70 +510,38 @@ footer {
     .modal-potion-infos {
         float: right;
     }
+    /* Responsividade modal */
+    .modal-image-container {
+        width: 100%;
+    }
+    #potion-image{
+        margin: 0 auto;
+        width: 75%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .modal-potion-infos {
+        font-size: 14px;
+        display: contents;
+    }
+    .potion-name-container {
+        text-align: center;
+    }
+    .potion-price-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #potion-price-title {
+        margin: 0;
+    }
+    #potion-price {
+        margin-left: 5px;
+    }
+    #button-add-cart{
+        width: 45%;
+    }
 }
 
 /* Modal */
-
-.modal-container {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, .5);
-    z-index: 1000;
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background: #fff;
-    width: 55%;
-    height: 65%;
-    min-width: 300px;
-    padding: 40px;
-    position: relative;
-}
-
-.button-close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    border: none;
-    background: none;
-    margin: 5px 12px;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 1.1em;
-}
-
-.modal-container.show {
-    display: flex;
-}
-
-.modal-image-container {
-    float: left;
-    width: 60%;
-}
-
-.modal-potion-image {
-    width: 95%;
-}
-
-.modal-potion-title {
-    margin: 15px 0;
-}
-
-#button-add-cart {
-    display: block;
-    margin: 15px;
-}
-
-.modal-potion-title:last-of-type {
-    margin-bottom: 0;
-}
-
-.modal-potion-ingredients {
-    list-style: none;
-}

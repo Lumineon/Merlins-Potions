@@ -21,12 +21,10 @@
                     <a href="">Supplies</a>
                     <a href="">Charms</a>
                     <a href="">Clearance!</a>
-                    <a href="">Sign In</a> or
-                    <a href="">Sign Up</a>
-                    <!-- <div class="mobile-user-area">
-                        <a href="">Sign In</a> or
-                        <a href="">Sign Up</a>
-                    </div> -->
+                    <div class="mobile-user-area">
+                        <a href="" class="mobile-sign-text">Sign In</a> <span>or</span>
+                        <a href="" class="mobile-sign-text">Sign Up</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -52,6 +50,15 @@
                 </div>
             </div>
         </div>
+
+        <!-- Mobile free shipping text -->
+
+        <div class="mobile-shipping-text-container">
+            <span class="mobile-shipping-text">Free shipping on order over $50</span>
+        </div>
+
+        <!-- Continuação da página -->
+
         <nav class="main-navigation">
             <ul class="nav-itens">
                 <li>Potions</li>
@@ -62,7 +69,9 @@
                 <li>Clearance!</li>
             </ul>
             <div class="user-area">
-                <span class="user-area-login">Sign in <span id="">or</span> Sign up</span>
+                <a href="" class="user-area-login">Sign in </a>
+                <span>or</span>
+                <a href="" class="user-area-login"> Sign up</a>
             </div>
         </nav>
     </header>
@@ -167,16 +176,23 @@
                 <img id="potion-image" class="modal-potion-image" src="Products/aging-potion.png">
             </div>
             <div class="modal-potion-infos">
-                <h3 id="potion-name" class="modal-potion-title"></h3>
-                <h3 class="modal-potion-title">Use/Effect:</h3>
-                <p id="potion-effect" class="modal-potion-text">Causes the drinker...</p>
-                <h3 class="modal-potion-title">Ingredients:</h3>
-                <ul id="potion-ingredients" class="modal-potion-ingredients">
-
-                </ul>
-                <h3 class="modal-potion-title">Price:</h3>
-                <span id="potion-price" class="potion-price">$29.99</span>
-                <button id="button-add-cart" class="submit-button">Add to cart</button>
+                <div class="potion-name-container">
+                    <h3 id="potion-name" class="modal-potion-title"></h3>
+                </div>
+                <div class="potion-effect-container">
+                    <h3 class="modal-potion-title">Use/Effect:</h3>
+                    <p id="potion-effect" class="modal-potion-text">Causes the drinker...</p>
+                </div>
+                <div class="potion-ingredients-container">
+                    <h3 class="modal-potion-title">Ingredients:</h3>
+                    <ul id="potion-ingredients" class="modal-potion-ingredients">
+                    </ul>
+                </div>
+                <div class="potion-price-container">
+                    <h3 class="modal-potion-title" id="potion-price-title">Price:</h3>
+                    <span id="potion-price" class="potion-price">$29.99</span>
+                    <button id="button-add-cart" class="submit-button">Add to cart</button>
+                </div>
             </div>
         </div>
     </div>
