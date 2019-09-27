@@ -1,6 +1,7 @@
 // menu dropdown mobile
 var changeMenuImage = document.getElementById('dropdown');
 var hideHeader = document.getElementById('header-element');
+var showSearchBar = document.getElementById('mobile-search');
 
 //mostra menu mobile
 function showMenuFunction() {
@@ -12,16 +13,18 @@ function showMenuFunction() {
     }
 }
 
-//troca imagem do menu para a do 'X' e esconde header
+//troca imagem do menu para a do 'X' e esconde header, adiciona search bar
 function showElements() {
     changeMenuImage.src = 'Icons/menu-close-icon.png';
     hideHeader.classList.add('hide');
+    showSearchBar.classList.add('showBar');
 }
 
-//troca novamente a imagem e volta header
+//troca novamente a imagem e volta header, remove search bar
 function hideElements() {
     changeMenuImage.src = 'Icons/menu-icon.png';
     hideHeader.classList.remove('hide');
+    showSearchBar.classList.remove('showBar');
 }
 
 
@@ -52,7 +55,6 @@ for (let i = 0; i < open.length; i++) {
     })
 
 }
-
 
 // fechar modal quando clicar no botão
 close.onclick = function () {

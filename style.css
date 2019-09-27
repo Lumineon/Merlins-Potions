@@ -4,7 +4,7 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-.mobile-menu-icon, .mobile-menu-dropdown-itens, .mobile-user-area {
+.mobile-menu-icon, .mobile-menu-dropdown-itens, .mobile-user-area, .header-itens.hide, #mobile-search {
     display: none;
 }
 
@@ -27,10 +27,6 @@ header {
     width: 100%;
     height: 70%;
     display: flex;
-}
-
-.header-itens.hide {
-    display: none;
 }
 
 .header-logo-container {
@@ -377,11 +373,28 @@ footer {
         position: relative;
         float: left;
         width: 10%;
-        margin: 25px 20px;
+        margin-top: 25px;
     }
     .mobile-menu-icon {
         display: inline;
         cursor: pointer;
+    }
+    .mobile-search-container{
+        display: block;
+        cursor: pointer;
+        float: left;
+    }
+    .input-search-stock{
+        margin-left: 50px;
+        width: 60%;
+        display: none;
+    }
+    #mobile-search.showBar{
+        position: absolute;
+        top: 0;
+        display: block;
+        width: 70vw;
+        margin-left: 70px;
     }
     .mobile-menu-dropdown-container {
         margin: 10px 0;
