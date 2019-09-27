@@ -1,27 +1,27 @@
 // menu dropdown mobile
-var search = document.getElementById('search-bar');
-var change = document.getElementById('dropdown');
-var hide = document.getElementById('header-element');
+var changeMenuImage = document.getElementById('dropdown');
+var hideHeader = document.getElementById('header-element');
 
+//mostra menu mobile
 function showMenuFunction() {
-    var image = document.getElementById('dropdown-itens').classList.toggle('showMenu');
-    if (image) {
+    var activateButton = document.getElementById('dropdown-itens').classList.toggle('showMenu');
+    if (activateButton) {
         showElements();
     } else {
         hideElements();
     }
 }
 
+//troca imagem do menu para a do 'X' e esconde header
 function showElements() {
-    change.src = 'Icons/menu-close-icon.png';
-    search.classList.add('show');
-    hide.classList.add('hide');
+    changeMenuImage.src = 'Icons/menu-close-icon.png';
+    hideHeader.classList.add('hide');
 }
 
+//troca novamente a imagem e volta header
 function hideElements() {
-    change.src = 'Icons/menu-icon.png';
-    search.classList.remove('show');
-    hide.classList.remove('hide');
+    changeMenuImage.src = 'Icons/menu-icon.png';
+    hideHeader.classList.remove('hide');
 }
 
 

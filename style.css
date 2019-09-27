@@ -9,7 +9,7 @@
 }
 
 h1 {
-    margin: 10px 20px;
+    margin: 20px 100px;
 }
 
 h2 {
@@ -28,7 +28,8 @@ header {
     height: 70%;
     display: flex;
 }
-.header-itens.hide{
+
+.header-itens.hide {
     display: none;
 }
 
@@ -51,7 +52,8 @@ header {
     justify-content: center;
     margin: 0 auto;
 }
-.header-search-bar.show{
+
+.header-search-bar.show {
     display: flex;
 }
 
@@ -65,7 +67,10 @@ header {
 
 .input-search-stock {
     width: 80%;
-    padding-left: 30px;
+    border:1px solid #000000;
+    border-radius: 4px;      
+    background: url(Icons/search-icon.png) no-repeat;
+    padding-left:50px;
 }
 
 .header-bag-area {
@@ -87,7 +92,7 @@ header {
     margin-right: 5px;
 }
 
-.bag-icon{
+.bag-icon {
     cursor: pointer;
     margin-right: 10px;
 }
@@ -131,7 +136,8 @@ header {
     align-items: center;
     cursor: pointer;
 }
-.nav-itens li:hover{
+
+.nav-itens li:hover {
     background: #461b64;
 }
 
@@ -152,7 +158,7 @@ header {
     margin: 15px;
 }
 
-.user-area span{
+.user-area span {
     color: #7d47a3;
 }
 
@@ -181,6 +187,10 @@ header {
     display: flex;
     justify-content: center;
     margin: 0 auto;
+}
+
+.potion-image:hover {
+    opacity: 0.5;
 }
 
 .potion-name {
@@ -283,6 +293,10 @@ footer {
     cursor: pointer;
 }
 
+.submit-button:hover {
+    background: #ff2600;
+}
+
 .modal-container {
     width: 100vw;
     height: 100vh;
@@ -356,6 +370,9 @@ footer {
         display: none;
     }
     /* Mobile */
+    .mobile-header{
+        width: 100%;
+    }
     .mobile-menu-container {
         position: relative;
         float: left;
@@ -376,9 +393,12 @@ footer {
         display: none;
         width: 100vw;
     }
-    /* .mobile-menu-dropdown-itens a:first-child {
+    .mobile-menu-dropdown-itens a:first-child {
         margin-top: 10px;
-    } */
+    }
+    .mobile-user-area a:first-child {
+        margin-top: 0;
+    }
     .mobile-menu-dropdown-itens a {
         display: block;
         text-decoration: none;
@@ -402,7 +422,6 @@ footer {
     .showMenu {
         display: block;
     }
-    
     /* Responsividade */
     header {
         height: auto;
@@ -469,7 +488,7 @@ footer {
         width: 45%;
         height: 30%;
     }
-    .potion-image{
+    .potion-image {
         height: auto;
     }
     .nav-itens, .user-area {
@@ -522,7 +541,7 @@ footer {
     .modal-image-container {
         width: 100%;
     }
-    #potion-image{
+    #potion-image {
         margin: 0 auto;
         width: 75%;
         display: flex;
@@ -547,7 +566,7 @@ footer {
     #potion-price {
         margin-left: 5px;
     }
-    #button-add-cart{
+    #button-add-cart {
         width: 45%;
     }
 }
